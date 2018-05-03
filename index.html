@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>Customer order form</title>
+</head>
+<body class="bg-light">
+  <header class="py-5">
+    <div class="container">
+      <h1 class="mb-0 display-4">Customer order form</h1>
+    </div>
+  </header>
+  <main class="pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <form id="orderForm">
+                <h2 class="h5">Name</h2>
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                  <label>Second Name</label>
+                  <input type="text" class="form-control" id="secondName" placeholder="Second Name">
+                </div>
+                <h2 class="h5">Shirt</h2>
+                <div class="form-group">
+                  <label>Quantity</label>
+                  <input type="number" class="form-control" id="shirtQuantity">
+                </div>
+                <h2 class="h5">Tie</h2>
+                <div class="form-group">
+                  <label>Quantity</label>
+                  <input type="number" class="form-control" id="tieQuantity">
+                </div>
+                <h2 class="h5">Customer status</h2>
+                <div class="form-group">
+                  <label>Select customer status</label>
+                  <select class="custom-select" id="customerStatus">
+                    <option value="1" selected="selected">Non-registered customer</option>
+                    <option value="2">Registered customer</option>
+                    <option value="3">Trade customer</option>
+                  </select>
+                </div>
+                <h2 class="h5">Delivery</h2>
+                <div class="form-group">
+                  <label>Select delivery time</label>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="deliveryOption1" name="radio" checked="checked">
+                    <label class="custom-control-label" for="deliveryOption1">5 days <span class="badge badge-success">£2</span></label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="deliveryOption2" name="radio">
+                    <label class="custom-control-label" for="deliveryOption2">3 days <span class="badge badge-success">£3</span></label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="deliveryOption3" name="radio">
+                    <label class="custom-control-label" for="deliveryOption3">Next day <span class="badge badge-success">£5</span></label>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-success" id="addToBasket">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="mb-0 h5">Basket</h2>
+              <hr class="my-4">
+              <p id="greetingMessage"></p>
+              <p id="shirtSubtotal"></p>
+              <p id="tieSubtotal"></p>
+              <p id="deliveryCost"></p>
+              <p id="discount"></p>
+              <p id="totalCost"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
